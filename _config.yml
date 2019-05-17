@@ -51,13 +51,6 @@ instagram_url: https://www.instagram.com/vitaaminem/
 linkedin_url: https://www.linkedin.com/in/mcharrak/
 github_url: https://github.com/mcharrak
 
-# setup to enable latex in markdown files
-# First set the KramDown to work with MathJax engine:
-# source https://www.amirasiaee.com/dailyreport/katex-for-jekyll/
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-
 
 # Google Analytics Tracking ID goes here:
 google_analytics: UA-124747697-1
