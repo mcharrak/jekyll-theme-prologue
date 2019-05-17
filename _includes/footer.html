@@ -1,6 +1,6 @@
 <!-- Footer -->
 <div id="footer">
-  
+
   <!-- Copyright -->
   <ul class="copyright">
     {% if site.title or site.author %}
@@ -9,5 +9,19 @@
     <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
     <li>Jekyll integration: <a href="https://chrisbobbe.github.io/">Chris Bobbe</a></li>
   </ul>
-  
+
+
+  <!-- Changing MathJax to KaTex -->
+  <script>
+    $("script[type='math/tex']").replaceWith(function() {
+        var tex = $(this).text();
+        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
+    });
+
+    $("script[type='math/tex; mode=display']").replaceWith(function() {
+        var tex = $(this).html();
+        return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+    });
+  </script>
+
 </div>

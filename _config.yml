@@ -30,9 +30,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Amine  M Charrak 
+title: Amine  M Charrak
 subtitle: Machine Learning & Photography
-title: Amine  M'Charrak 
+title: Amine  M'Charrak
 description: >- # this means to ignore newlines until "baseurl:"
   Delivering Machine Learning knowledge and travel inspiration.
   Sharing my mind and stories with you!
@@ -50,6 +50,13 @@ facebook_url: https://www.facebook.com/amine.mshark
 instagram_url: https://www.instagram.com/vitaaminem/
 linkedin_url: https://www.linkedin.com/in/mcharrak/
 github_url: https://github.com/mcharrak
+
+# setup to enable latex in markdown files
+# First set the KramDown to work with MathJax engine:
+# source https://www.amirasiaee.com/dailyreport/katex-for-jekyll/
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
 
 
 # Google Analytics Tracking ID goes here:
