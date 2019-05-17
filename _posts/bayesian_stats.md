@@ -2,6 +2,7 @@
 title: Bayesian statistics terms and expressions
 author: Amine
 layout: post
+order: 3
 ---
 #### Bayesian Optimisation (BO)
 
