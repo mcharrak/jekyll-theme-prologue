@@ -1,8 +1,7 @@
 ---
-title: Bayesian statistics terms and expressions
+title: Machine Learning Bayesian Statistics and Concepts Tutorial
 author: Amine
 layout: post
-order: 3
 ---
 #### Bayesian Optimisation (BO)
 
