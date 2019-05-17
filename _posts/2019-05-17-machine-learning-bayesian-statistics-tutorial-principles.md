@@ -168,3 +168,16 @@ The **Gumbel-Softmax** trick is a method that allows to draw samples from a cate
 A likelihood function in which some parameter variables have been marginalized out. Thus is may also be referred to as *evidence*. Given a set of i.i.d. data points $\bm{X} = (x_1, ..., x_n)$, where $x_i \sim p(x_i|\theta)$ (a probability distribution parameterized by $\theta$ ), and where $\theta$ itself is a RV (i.e. has the distribution $\theta \sim p(\theta|\alpha)$), the marginal likelihood is the probability $p(\bm{X}|\alpha)$. Where the parameter variable $\theta$ has been marginalized over (integrated out) s.t.
 
 $$p(\bm{X}|\alpha) = \int_{\theta} p(\bm{X}|\theta,\alpha) p(\theta|\alpha)d\theta$$
+
+
+<script>
+  $("script[type='math/tex']").replaceWith(function() {
+      var tex = $(this).text();
+      return katex.renderToString(tex, {displayMode: false});
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+      var tex = $(this).html();
+      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
+</script>
