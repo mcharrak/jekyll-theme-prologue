@@ -9,7 +9,7 @@ A strategy for global optimization of a black-box function (i.e. unknown). BO he
 
 #### Gaussian Process (GP)
 
-A GP defines a distribution over functions $p(f)$ which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $x$, $x'$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
+A GP defines a distribution over functions \(p(f)\) which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $x$, $x'$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
 
 #### Ensemble learning
 
