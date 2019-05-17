@@ -3,7 +3,7 @@ title: Machine Learning Tutorial on Bayesian Statistics: Concepts and Terms
 author: Amine
 layout: post
 ---
-#### Bayesian Optimisation (BO)
+#### Bayesian Optimization (BO)
 
 A strategy for global optimization of a black-box function (i.e. unknown). BO helps to find a best model among many. BO does not require derivatives because the objective function is unknown. Use a prior which captures our beliefs about the behavior of the objective function. Use function evaluations in order to update the prior to form the posterior distribution over the objective function. BO is suited for functions that are very expensive to evaluate. BO is applied within automatic machine learning toolboxes and architecture configuration in deep learning.
 
