@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Tutorial on Bayesian Statistics: Concepts and Terms
+title: Machine Learning Tutorial on Bayesian Statistics - Concepts and Terms
 author: Amine
 layout: post
 ---
