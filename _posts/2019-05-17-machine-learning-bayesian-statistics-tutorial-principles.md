@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Bayesian Statistics and Concepts Tutorial
+title: Machine Learning Tutorial on Bayesian Statistics: Concepts and Terms 
 author: Amine
 layout: post
 ---
@@ -9,7 +9,7 @@ A strategy for global optimization of a black-box function (i.e. unknown). BO he
 
 #### Gaussian Process (GP)
 
-A GP defines a distribution over functions \(p(f)\) which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $x$, $x'$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
+A GP defines a distribution over functions $p(f)$ which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $x$, $x'$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
 
 #### Ensemble learning
 
@@ -168,16 +168,3 @@ The **Gumbel-Softmax** trick is a method that allows to draw samples from a cate
 A likelihood function in which some parameter variables have been marginalized out. Thus is may also be referred to as *evidence*. Given a set of i.i.d. data points $\bm{X} = (x_1, ..., x_n)$, where $x_i \sim p(x_i|\theta)$ (a probability distribution parameterized by $\theta$ ), and where $\theta$ itself is a RV (i.e. has the distribution $\theta \sim p(\theta|\alpha)$), the marginal likelihood is the probability $p(\bm{X}|\alpha)$. Where the parameter variable $\theta$ has been marginalized over (integrated out) s.t.
 
 $$p(\bm{X}|\alpha) = \int_{\theta} p(\bm{X}|\theta,\alpha) p(\theta|\alpha)d\theta$$
-
-
-<script>
-  $("script[type='math/tex']").replaceWith(function() {
-      var tex = $(this).text();
-      return katex.renderToString(tex, {displayMode: false});
-  });
-
-  $("script[type='math/tex; mode=display']").replaceWith(function() {
-      var tex = $(this).html();
-      return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
-  });
-</script>
