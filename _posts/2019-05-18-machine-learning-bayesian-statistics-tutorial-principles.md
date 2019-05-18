@@ -2,6 +2,7 @@
 title: Machine Learning Tutorial on Bayesian Statistics - Concepts and Terms
 author: Amine
 layout: post
+math : true
 ---
 #### Bayesian Optimization (BO)
 
