@@ -51,6 +51,12 @@ instagram_url: https://www.instagram.com/vitaaminem/
 linkedin_url: https://www.linkedin.com/in/mcharrak/
 github_url: https://github.com/mcharrak
 
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
 
 # Google Analytics Tracking ID goes here:
 google_analytics: UA-124747697-1
