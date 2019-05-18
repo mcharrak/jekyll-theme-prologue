@@ -57,6 +57,15 @@ theme: minima
 plugins:
   - jekyll-feed
 
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+
+
+
 
 # Google Analytics Tracking ID goes here:
 google_analytics: UA-124747697-1
