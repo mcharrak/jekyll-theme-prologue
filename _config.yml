@@ -51,11 +51,11 @@ instagram_url: https://www.instagram.com/vitaaminem/
 linkedin_url: https://www.linkedin.com/in/mcharrak/
 github_url: https://github.com/mcharrak
 
-# Build settings
+# Settings to render math with Katex
+# Source: https://nealde.github.io/blog/2017/10/20/How-to-make-a-local-Jekyll-website/
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
-
+   math_engine: mathjax
 
 # Google Analytics Tracking ID goes here:
 google_analytics: UA-124747697-1

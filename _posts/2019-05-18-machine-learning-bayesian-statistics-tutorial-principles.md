@@ -1,8 +1,8 @@
 ---
 title: Machine Learning Tutorial on Bayesian Statistics - Concepts and Terms
-author: Amine
+author: Amine M'Charrak
 layout: post
-math : true
+date: 2019-05-18 4:00:00
 ---
 #### Bayesian Optimization (BO)
 
@@ -41,7 +41,7 @@ A family of of discrete multivariate probability distributions on a finite set o
 
 #### Conjugate prior
 
-In Bayesian probability theory, if the posterior distributions $p(\theta|x)$ is from the same probability distribution family as the prior distribution $p(\theta)$, then the two distributions are conjugate distributions. The prior is called conjugate prior for the likelihood function $p(x|\theta)$. The conjugate prior may give intuition, by showing how a likelihood function (i.e. observed data) updates the prior distribution.
+In Bayesian probability theory, if the posterior distributions $p(\theta \vert x)$ is from the same probability distribution family as the prior distribution $p(\theta)$, then the two distributions are conjugate distributions. The prior is called conjugate prior for the likelihood function $p(x \vert \theta)$. The conjugate prior may give intuition, by showing how a likelihood function (i.e. observed data) updates the prior distribution.
 
 For example, the Gaussian distribution is conjugate to itself (*self-conjugate*) with respect to the Gaussian likelihood function. Thus, if the likelihood function is Gaussian, choosing a Gaussian prior will ensure that the posterior distribution is also Gaussian.
 
@@ -146,7 +146,7 @@ Gibbs sampling generates an instance $x_1, ..., x_n$ from the distribution of ea
 
 Gibbs sampling is a randomized algorithm *(i.e. makes use of random numbers)* and it is an alternative to deterministic algorithms such as the expectation-maximization algorithm (EM). Gibbs sampling generates a Markov chain of samples, each of which will be correlated to nearby (in time) samples.
 
-Gibbs sampling is commonly applied for sampling from the posterior distribution of a Bayesian network (BN). This is because a BN is typically specified as a collection of conditional probabilities $P(X_i|X_{-i}) \; \forall \in \{1,...,n\}$  
+Gibbs sampling is commonly applied for sampling from the posterior distribution of a Bayesian network (BN). This is because a BN is typically specified as a collection of conditional probabilities $P(X_i \vert X_{-i}) \; \forall \in \{1,...,n\}$  
 
 
 #### Gumbel-Max trick
@@ -166,6 +166,6 @@ The **Gumbel-Softmax** trick is a method that allows to draw samples from a cate
 
 #### Marginal likelihood
 
-A likelihood function in which some parameter variables have been marginalized out. Thus is may also be referred to as *evidence*. Given a set of i.i.d. data points $\boldsymbol{X} = (x_1, ..., x_n)$, where $x_i \sim p(x_i|\theta)$ (a probability distribution parameterized by $\theta$ ), and where $\theta$ itself is a RV (i.e. has the distribution $\theta \sim p(\theta|\alpha)$), the marginal likelihood is the probability $p(\boldsymbol{X}|\alpha)$. Where the parameter variable $\theta$ has been marginalized over (integrated out) s.t.
+A likelihood function in which some parameter variables have been marginalized out. Thus is may also be referred to as *evidence*. Given a set of i.i.d. data points $\boldsymbol{X} = (x_1, ..., x_n)$, where $x_i \sim p(x_i \vert \theta)$ (a probability distribution parameterized by $\theta$ ), and where $\theta$ itself is a RV (i.e. has the distribution $\theta \sim p(\theta \vert \alpha)$), the marginal likelihood is the probability $p(\boldsymbol{X} \vert \alpha)$. Where the parameter variable $\theta$ has been marginalized over (integrated out) s.t.
 
-$$p(\boldsymbol{X}|\alpha) = \int_{\theta} p(\boldsymbol{X}|\theta,\alpha) p(\theta|\alpha)d\theta$$
+$$p(\boldsymbol{X} \vert \alpha) = \int_{\theta} p(\boldsymbol{X} \vert \theta,\alpha) p(\theta \vert \alpha)d\theta$$
