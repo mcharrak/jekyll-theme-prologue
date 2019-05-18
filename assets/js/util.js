@@ -94,6 +94,15 @@
 
 			}, userConfig);
 
+
+			MathJax.Hub.Config({
+			  tex2jax: {
+			    inlineMath: [['$','$'], ['\\(','\\)']],
+			    processEscapes: true
+			  }
+			});
+
+
 			// Expand "target" if it's not a jQuery object already.
 				if (typeof config.target != 'jQuery')
 					config.target = $(config.target);
