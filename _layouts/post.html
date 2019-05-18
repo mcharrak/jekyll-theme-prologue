@@ -29,3 +29,27 @@ layout: default
       return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
   });
 </script>
+
+
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+
+<!--
+<script>
+      renderMathInElement(
+          document.getElementById("your post id"),
+          {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "\\[", right: "\\]", display: true},
+                  {left: "$", right: "$", display: false},
+                  {left: "\\(", right: "\\)", display: false}
+              ]
+          }
+      );
+</script>
+-->
