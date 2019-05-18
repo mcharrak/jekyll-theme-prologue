@@ -53,18 +53,8 @@ github_url: https://github.com/mcharrak
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    processEscapes: true
-  }
-});
-
-
+kramdown:
+  math_engine: mathjax
 
 
 # Google Analytics Tracking ID goes here:
