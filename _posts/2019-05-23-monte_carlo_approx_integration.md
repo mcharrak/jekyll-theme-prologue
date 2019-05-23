@@ -152,17 +152,7 @@ plt.xlabel("Approximated value")
 plt.ylabel("Count")
 ```
 
-![Histogram of approximations](https://github.com/mcharrak/mcharrak.github.io/blob/master/assets/images/Monte_CarloApprox_Integration_files/Monte_CarloApprox_Integration_27_1.png)
+![Histogram of approximations](assets/images/monte_carlo_approx_integration_images/monte_carlo_approx_integration_images.png)
 
 
-Finally, we see, that the histogram is centered around the approximated value of 2 and flattens out to both sides. We can reduce the uncertainty, i.e. variance of this histogram, by increasing the number of samples. When the number of samples approaches $\infty$ we should see an almost "delta-function with a peak at around 2!
-
-
-```python
-
-```
-
-
-```python
-
-```
+Finally, we see, that the histogram is centered around the approximated value of 2 and flattens out to both sides. We can reduce the uncertainty, i.e. variance of this histogram, by increasing the number of samples. When the number of samples approaches $\infty$ we should see an almost "delta-like" function with a peak at around 2!
