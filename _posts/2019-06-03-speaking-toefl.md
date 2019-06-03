@@ -12,10 +12,10 @@ For instance "*What is your favorite toy? Describe it and explain why it is your
 
 Basic structure of our answer:
 
-* a: note down key word of your answer
+* a: note down key word of your answer <br/>
  -> (write down your answer WHILE! you are still listening to the audio question)
-* r1: note down reason number one to support your answer
-* r2: note down reason number two to support your answer<br/>
+* r1: note down reason number one to support your answer <br/>
+* r2: note down reason number two to support your answer <br/>
 -> (use the remaining 15 seconds of preparation time to come up with two good reasons)
 
 Use the following structure to answer the question.
