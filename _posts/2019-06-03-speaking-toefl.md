@@ -12,11 +12,11 @@ For instance "*What is your favorite toy? Describe it and explain why it is your
 
 Basic structure of our answer:
 
-* a: note down key word of your answer <br/>
- -> (write down your answer WHILE! you are still listening to the audio question)
+* a: note down the key word of your answer <br/>
+ -> (write down your answer WHILE you are still listening to the audio question)
 * r1: note down reason number one to support your answer <br/>
 * r2: note down reason number two to support your answer <br/>
--> (use the remaining 15 seconds of preparation time to come up with two good reasons)
+-> (use the full 15 seconds of preparation time to come up with two good reasons)
 
 Use the following structure to answer the question.
 
@@ -28,4 +28,4 @@ The second reason is that ... for instance ...
 
 Troubleshooting:
 
-It might be the case, that you are not able to come up with two specific reasons. In that case we can simply use two examples for the same reason. You may want to use the expression "on the other hand" when introducing the second example. A simple and straight second example might be an example which is exactly the opposite of your previous example, such that it supports the expressiveness of your initial example.
+It might be the case that you are not able to come up with two specific reasons. In that case we can simply use two examples for the same reason. You may want to use the expression "on the other hand" when introducing the second example. A simple and straightforward second example might be an example which is exactly the opposite of your previous example, such that it supports the expressiveness of your first example.
