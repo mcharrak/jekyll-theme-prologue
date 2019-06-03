@@ -14,8 +14,8 @@ Basic structure of our answer:
 
 * a: note down key word of your answer
  -> (write down your answer WHILE! you are still listening to the audio question)
-* r1: note down reasons number to support your answer
-* r2: note down reasons number to support your answer
+* r1: note down reason number one to support your answer
+* r2: note down reason number two to support your answer<br/>
 -> (use the remaining 15 seconds of preparation time to come up with two good reasons)
 
 Use the following structure to answer the question.
@@ -24,7 +24,7 @@ Use the following structure to answer the question.
 2. Describe the thing/topic of your answer
 3. The first reason is that ... for example ...
 The second reason is that ... for instance ...
-4. That's why ... **answer** ... is important.
+4. That's why ... **your answer** ... is important.
 
 Troubleshooting:
 
