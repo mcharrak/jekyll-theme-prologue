@@ -108,7 +108,9 @@ The two types of nonparametric techniques architecture
 
 In general we want to learn a function $f$ that maps input $X$ to output $Y$
 
-$$Y = f(X)$$
+$$
+Y = f(X)
+$$
 
 ML methods that simplify the function $f$ to a known form (fixed number of parameters regardless of the size of the dataset X) are called *parametric* ML algorithms (e.g. logistic regression, perceptron, Naïve Bayes). Such an algorithm involves two steps:
 
@@ -147,8 +149,7 @@ Gibbs sampling generates an instance $x_1, ..., x_n$ from the distribution of ea
 
 Gibbs sampling is a randomized algorithm *(i.e. makes use of random numbers)* and it is an alternative to deterministic algorithms such as the expectation-maximization algorithm (EM). Gibbs sampling generates a Markov chain of samples, each of which will be correlated to nearby (in time) samples.
 
-Gibbs sampling is commonly applied for sampling from the posterior distribution of a Bayesian network (BN). This is because a BN is typically specified as a collection of conditional probabilities $P(X_i \vert X_{-i}) \; \forall \in \{1,...,n\}$  
-
+Gibbs sampling is commonly applied for sampling from the posterior distribution of a Bayesian network (BN). This is because a BN is typically specified as a collection of conditional probabilities $P(X_i \vert X_{-i}) \; \forall \in \{1,...,n\}$.
 
 #### Gumbel-Max trick
 
@@ -161,7 +162,9 @@ over $g=-log(-log(u))$. Here we sample $u$ from the Uniform distribution $u \sim
 2. Add the sampled Gumbel noise to $log(\alpha_k)$
 3. Take the index $k$ that maximizes the term $log(\alpha_k) + g_k$ as sample value for the categorical distribution
 
-$$z = \underset{x}{\arg\max} [log(\alpha_k) + g_i] $$
+$$
+z = \underset{x}{\arg\max} [log(\alpha_k) + g_i]
+$$
 
 The **Gumbel-Softmax** trick is a method that allows to draw samples from a categorical distribution but uses the $softmax$ function instead of the $\arg \max$ function as differentiable approximation to $\arg \max$.
 
@@ -169,4 +172,6 @@ The **Gumbel-Softmax** trick is a method that allows to draw samples from a cate
 
 A likelihood function in which some parameter variables have been marginalized out. Thus is may also be referred to as *evidence*. Given a set of i.i.d. data points $\boldsymbol{X} = (x_1, ..., x_n)$, where $x_i \sim p(x_i \vert \theta)$ (a probability distribution parameterized by $\theta$ ), and where $\theta$ itself is a RV (i.e. has the distribution $\theta \sim p(\theta \vert \alpha)$), the marginal likelihood is the probability $p(\boldsymbol{X} \vert \alpha)$. Where the parameter variable $\theta$ has been marginalized over (integrated out) s.t.
 
-$$p(\boldsymbol{X} \vert \alpha) = \int_{\theta} p(\boldsymbol{X} \vert \theta,\alpha) p(\theta \vert \alpha)d\theta$$
+$$
+p(\boldsymbol{X} \vert \alpha) = \int_{\theta} p(\boldsymbol{X} \vert \theta,\alpha) p(\theta \vert \alpha)d\theta
+$$
