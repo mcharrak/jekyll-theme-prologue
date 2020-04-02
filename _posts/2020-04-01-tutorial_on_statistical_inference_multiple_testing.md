@@ -19,7 +19,7 @@ Now, we wish to answer which features are significantly affected by our treatmen
 
 One statistical way to do this, would be multiple 2-sample t-testing for each feature between our two groups using a significance level of e.g. alpha=0.5. Let's assume that we know that our treatment has no effect on the features because we used a placebo as treatment. Unfortunately, such a statistical approach will lead to many false positives (type-1-error). This means, that we will be reporting significant p-values for some features even though the null hypothesis is true for all features (because our participants came from the same population).
 
-Under the null hypothesis H0, ideally no p-value should be significant. However, p-values follow a uniform distribution under the null hypothesis \(H_0\).
+Under the null hypothesis $H_0$, ideally no p-value should be significant. However, p-values follow a uniform distribution under the null hypothesis $H_0$.
 
 Therefore, 5% (i.e. $\alpha$ * 100) of all p-values that we calculated (here 0.05*100= 50 in total) will be <=0.05, even though theoretically we should have found that all 1000 p-values should be larger than the significance level $\alpha$ - hence forcing us to "fail to reject" the null hypothesis $H_0$.
 
