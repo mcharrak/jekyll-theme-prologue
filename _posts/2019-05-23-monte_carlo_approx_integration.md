@@ -8,11 +8,13 @@ date: 2019-05-23 4:00:00
 
 We will calculate the following integral:
 
-$\int_{0}^{\pi} sin(x)dx$
+$$
+\int_{0}^{\pi} sin(x)dx
+$$
 
 1. Let us solve this integral analytically using our calculus knowledge from high school:
 
-Integrating $sin(x)$ over x gives us $-cos(x)$. Thus, we have
+Integrating $sin(x)$ over $x$ gives us $-cos(x)$. Thus, we have
 
 $$
 \int_{0}^{\pi} sin(x)dx = -cos(x)\big\rvert_{0}^{\pi} = -(cos(\pi) - cos(0)) = -(-1 - 1) = 2
@@ -55,7 +57,7 @@ def int_func(x):
     return np.sin(x)
 ```
 
-Now we evaluate the function for all x
+Now we evaluate the function for all $x$
 
 
 ```python
@@ -80,14 +82,14 @@ $$
 (b-a)\frac{1}{N} \sum_{i=1}^{N} x_i \approx \int_{a}^{b} f(x) dx
 $$
 
-From the last equation above we can see, that we have to add up all the evaluations of our randomly sampled {x_i}. So lets to that!
+From the last equation above we can see, that we have to add up all the evaluations of our randomly sampled $\{x_i\}$. So lets do that!
 
 
 ```python
 sum_evals = sum(evals);
 ```
 
-The last missing part is calculating the 'length' of our interval (a,b) which is
+The last missing part is calculating the 'length' of our interval $(a,b)$ which is
 
 
 ```python
@@ -111,7 +113,7 @@ print("Our Monte Carlo method estimates the integral from 0 to pi for the functi
 
 Using this simple method we get fairly close to the true value of 2!
 
-**BUT** unfortunately, everytime we run this approximation, we get another value. In order to get a better idea of the true integral value, we will now plot the histogram of approximated integral values for a bunch of runs. We should see, that the histogram will have a peak around 2 and falls of to both sides. Let us see if this is the case!
+**BUT** unfortunately, every time we run this approximation, we get another value. In order to get a better idea of the true integral value, we will now plot the histogram of approximated integral values for a bunch of runs. We should see, that the histogram will have a peak around 2 and falls of to both sides. Let us see if this is the case!
 
 First we combine the above steps used to evaluate the integral into a single function with the only inputs being:
 
