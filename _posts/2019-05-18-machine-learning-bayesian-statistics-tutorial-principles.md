@@ -10,7 +10,7 @@ A strategy for global optimization of a black-box function (i.e. unknown). BO he
 
 #### Gaussian Process (GP)
 
-A GP defines a distribution over functions $$p(f)$$ which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $$x$$, $$x'$$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
+A GP defines a distribution over functions $p(f)$ which can be used for Bayesian regression. f is a function which maps from x to the set of real numbers R. A GP uses a *kernel function* to measure the similarity between points $x$, $x'$ to predict the value $y'$ for the unseen point $x'$ from the training data. The prediction $y'$ is not only an estimate for that point $x'$ but also contains information about uncertainty. The distribution of a GP is the joint distribution. Its marginal distribution is a multivariate Gaussian distribution. GPs are parameterized by a mean function $\mu(x)$ and a covariance function (i.e. kernel) $K(x,x')$. GP can be used for nonlinear regression or prediction/classification tasks.
 
 #### Ensemble learning
 
@@ -28,10 +28,11 @@ The Dirichlet distribution is the conjugate prior distribution of the categorica
 
 #### Categorical distribution vs. multinomial distribution
 
-The categorical distribution is a generalization of the Bernoulli distribution ($K=2$) because the number of possible outcomes $K>2$. The categorical distribution (sometimes called **multinoulli distribution**) describes the probability of a random variable (RV) that can take on one of $K$ different outcomes and relates to a single trial ($N=1$). In contrast, the multinomial distribution describes the probability after $N$ trials for a sequence of i.i.d RVs $X_1, ..., X_n$ each with a categorical distribution. In a nutshell the relationship between these distributions is as follows
+The categorical distribution is a generalization of the Bernoulli distribution ($K=2$) because the number of possible outcomes $K>2$. The categorical distribution (sometimes called **multinoulli distribution**) describes the probability of a random variable (RV) that can take on one of $K$ different outcomes and relates to a single trial ($N=1$). In contrast, the multinomial distribution describes the probability after $N$ trials for a sequence of i.i.d RVs $X_1, ..., X_n$ each with a categorical distribution. In a nutshell the relationship between these distributions is as follows:
 
-Bernoulli ($N=1$) $\rightarrow$ Binomial ($N>1$)
-Categorical ($N=1$) $\rightarrow$ Multinomial ($N>1$)
++ Bernoulli ($N=1$) $\rightarrow$ Binomial ($N>1$)
+
++ Categorical ($N=1$) $\rightarrow$ Multinomial ($N>1$)
 
 where $N$ is the number of trials.
 
