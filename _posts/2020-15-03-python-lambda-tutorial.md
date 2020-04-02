@@ -2,7 +2,7 @@
 title: Python Lambda Functions - how and when to use them - introduction tutorial
 author: Amine M'Charrak
 layout: post
-date: 2020-15-03 4:00:00
+date: 2020-03-15 04:00:00
 ---
 
 #### In this tutorial we will explore what lambda functions are and how to use them.
