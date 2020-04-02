@@ -7,13 +7,11 @@ date: 2019-05-23 4:00:00
 ### Tutorial: Monte Carlo Method for approximation of integrals
 
 We will calculate the following integral:
-$$
-\int_{0}^{\pi} sin(x)dx
-$$
+$ \int_{0}^{\pi} sin(x)dx $
 
 1. Let us solve this integral analytically using our calculus knowledge from high school:
 
-Integrating $sin(x)$ over x gives us $-cos(x)$. Thus, we have
+Integrating $ sin(x) $ over x gives us $ -cos(x) $. Thus, we have
 
 $$
 \int_{0}^{\pi} sin(x)dx = -cos(x)\big\rvert_{0}^{\pi} = -(cos(\pi) - cos(0)) = -(-1 - 1) = 2
