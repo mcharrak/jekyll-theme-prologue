@@ -26,25 +26,25 @@ Statistical analysis structure:
     + Describe your dependent variables (DVs) (i.e. *labels*). Which ones do you consider, how do you collect and measure them?
     + Identify and describe all possible confounding variables (i.e. *confounders*). Which ones to choose can be difficult but often it is helpful to review related literature to determine which confounding variables have been already studied and confirmed to have an influence on your independent outcome variables.
 4. What is analysis plan?
-    + Depending on the variable types (continuous, categorical (ordinal, nominal)), specify what statistical method you will employ for your research hypothesis (e.g. ANOVA, t-test). Below you can find a quick reference overview 2x2-table:
-
-    | Independent Variable (X)        | Dependent Variable (Y)           | Model |
-    | :------------- |:-------------| :-----|
-    | **continuous**      | continuous | linear regression |
-    | **continuous**      | categorical | logistic regression |
-    | | | |
-    | **categorical**      | continuous | 2 samples: t-test (compare two means) <br> ≤ 3 samples: ANOVA (compare multiple means)|
-    | **categorical**      | categorical | Chi-squared (χ2) test |
-
-
-
+    + Depending on the variable types (continuous, categorical (ordinal, nominal)), specify what statistical method you will employ for your research hypothesis (e.g. ANOVA, t-test). Below, you can find a quick reference overview 2x2-table
     + Before using your statistical models, make sure that your selected variables fulfill the modeling assumptions (e.g. independent samples, data normality, homogeneity of variance)
     + Define follow up experiments to investigate how stable and robust your interpretations and associations are; for instance you can try to add another variable and see if your interpretation holds or if earlier found associations vanish
     + Clearly define the reference group for your comparisons between groups with different characteristics
     + Explain for which variables, that you know might have an effect on your outcome variable, you are adjusting in order to make sure that you draw correct associations and conclusion between variables from your dataset
     + How big is your sample size, and given that sample size, what is the statistical power of your method and at which significance level (α)
+
+| Independent Variable (X)        | Dependent Variable (Y)           | Model |
+| :------------- |:-------------| :-----|
+| **continuous**      | continuous | linear regression |
+| **continuous**      | categorical | logistic regression |
+| | | |
+| **categorical**      | continuous | 2 samples: t-test (compare two means) <br> ≤ 3 samples: ANOVA (compare multiple means)|
+| **categorical**      | categorical | Chi-squared (χ2) test |
+
+
 5. What are the strengths and limitations of your research plan?
     + if your research contains new ideas, explain how it fits into the current literature and what novelty it contributes to the literature
     + if your data is not perfect (highly likely) or if your measuring methods do not allow to correctly represent the truth, then point out such flaws and other too optimistic assumptions
+
 
 That's it, now you are to start exploring your research ideas and run statistical experiments in a streamlined fashion. I hope this will help you to keep focused, while struggling with the data and unexpected results.
