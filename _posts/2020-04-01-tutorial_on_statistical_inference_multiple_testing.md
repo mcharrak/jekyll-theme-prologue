@@ -25,16 +25,34 @@ Therefore, 5% (i.e. $\alpha$ * 100) of all p-values that we calculated (here 0.0
 
 These "false discoveries" which we computed to be significant are a common challenge when performing multiple hypothesis testing. The probability of making such a "false discovery" is called **family-wise error rate** (FWER). FWER is the probability of incorrectly rejecting the null hypothesis $H_0$ *at least once*. FWER is calculated by choosing a significance level $\alpha$ and counting how often the hypothesis test results in a p-value smaller than the significance level $\alpha$. Therefore,
 
-$$ FWER = Pr(\#rejection - \#counts >= 1 \vert \; \forall H_0 \;true)$$
-$$ = 1 - Pr(\#rejection - \#counts = 0\vert \; \forall H_0 \;true) = 1 - (1-\alpha)^m $$
+$$
+FWER = Pr(\#rejection - \#counts >= 1 \vert \; \forall H_0 \;true)
+$$
+
+$$
+= 1 - Pr(\#rejection - \#counts = 0\vert \; \forall H_0 \;true) = 1 - (1-\alpha)^m
+$$
 
 where m is the total number of hypothesis tests that we run. We see that as m increases the FWER approaches 1, which means that FWER increases as the number of comparisons increases. There are two popular methods to assure that the FWER is at most $\bar{\alpha}$:
 
 1) Bonferroni correction where
-$$\alpha_{per-comparison} = \frac{\alpha}{m}$$
 
-2) Šidák correction which can be derived as follows: If our goal is to achieve a FWER of at most $\bar{\alpha}$, then we would get $$\bar{\alpha} = 1 - (1-\alpha_{per-comparison})^m $$ for the value of FWER. Now we have to solve for $\alpha_{per-comparison}$ which gives us
-$$ \alpha_{per-comparison} = 1 - (1 - \bar{\alpha})^{\frac{1}{m}} $$
+$$
+\alpha_{per-comparison} = \frac{\alpha}{m}
+$$
+
+2) Šidák correction which can be derived as follows: If our goal is to achieve a FWER of at most $\bar{\alpha}$, then we would get
+
+$$
+\bar{\alpha} = 1 - (1-\alpha_{per-comparison})^m
+$$
+
+for the value of FWER. Now we have to solve for $\alpha_{per-comparison}$ which gives us
+
+$$
+\alpha_{per-comparison} = 1 - (1 - \bar{\alpha})^{\frac{1}{m}}
+$$
+
 Now when we use $\alpha_{per-comparison}$ instead of $\alpha$ as our significance level for each test, then we will be able to limit our FWER to the worst case value of $\bar{\alpha}$.
 
 The Šidák method assumes that all the tests are independent, which is not always the case, e.g. in genomics where different genes do interact with each other. The Bonferroni method does not make the assumption that tests are independent.
