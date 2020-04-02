@@ -8,9 +8,11 @@ date: 2019-05-23 4:00:00
 
 We will calculate the following integral:
 
+
 $$
 \int_{0}^{\pi} sin(x)dx
 $$
+
 
 1. Let us solve this integral analytically using our calculus knowledge from high school:
 

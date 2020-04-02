@@ -106,11 +106,12 @@ The two types of nonparametric techniques architecture
 * artificial neural networks (ANN)
 * kernel estimation
 
-In general we want to learn a function $f$ that maps input $X$ to output $Y$
+In general we want to learn a function $f$ that maps input $X$ to output $Y$:
 
 $$
 Y = f(X)
 $$
+
 
 ML methods that simplify the function $f$ to a known form (fixed number of parameters regardless of the size of the dataset X) are called *parametric* ML algorithms (e.g. logistic regression, perceptron, Naïve Bayes). Such an algorithm involves two steps:
 
