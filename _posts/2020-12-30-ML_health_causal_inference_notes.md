@@ -143,7 +143,13 @@ The advantages and disadvantages of matching are:
 
 The key idea of propensity score methods, is to turn an observational study into something that looks like a randomised control trial (RCT) via/by re-weighting samples (i.e., data points).
 
-The key challenge when working with data from an observational study is that there might be bias with regards to who receives treatment 0 ($t=0$) and who receives treatment 1 ($t=1$). This means that the probability of receiving a treatment is not uniform for all individuals i. For the case of binary treatments we have: $$p(X|t=0) \neq p(X|t=1)$$ which means, that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$, varies with T.
+The key challenge when working with data from an observational study is that there might be bias with regards to who receives treatment 0 ($t=0$) and who receives treatment 1 ($t=1$). This means that the probability of receiving a treatment is not uniform for all individuals i. For the case of binary treatments we have
+
+$$
+p(X|t=0) \neq p(X|t=1)
+$$
+
+which means, that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$, varies with $T$.
 
 The goal of propensity score methods is to weight the conditional distributions such that the difference disappears. Meaning that we need to find the weights $w_{T}(x)$ for each treatment T such that we get the property:
 
