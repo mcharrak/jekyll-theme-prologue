@@ -28,18 +28,18 @@ People respond differently to the same treatment - which is called **heterogenei
 
 In causal inference for healthcare we have 3 variables, which as a triplet make up the dataset.
 
-1. patient variables X, which includes all confounding factors
-2. outcome variable Y, which could be the onset of a disease or the progression of it
-3. interventions T, such as medication or treatment procedure (e.g., radiotherapy vs chemotherapy)
+1. patient variables $X$, which includes all confounding factors
+2. outcome variable $Y$, which could be the onset of a disease or the progression of it
+3. interventions $T$, such as medication or treatment procedure (e.g., radiotherapy vs chemotherapy)
 
 An intervention T (a.k.a treatment-plan) can be
 * binary, i.e. choice between two treatments
 * continuous, e.g, dosage
 * a sequence of treatments over a time-interval
 
-The causal graph is known. The only unknowns are (1) the **effect/strength** of the treatment T on the outcome Y and (2) for what patient X does this treatment T work the most/best.
+The causal graph is known. The only unknowns are (1) the **effect/strength** of the treatment $T$ on the outcome $Y$ and (2) for what patients $i$ does the treatment work the most/best.
 
-All factors/things, that can influence the treatment decision are called **confounding factors**.
+All factors that influence the treatment decision are **confounding factors** but not all confounding factors are observed - there can be **hidden confounding factors**.
 
 ---
 
@@ -76,7 +76,11 @@ A confounding factor is a variable that
 
 **Typical assumptions**:
 
-1. *Ignorability*: There are no unobserved confounding factors. Mathematically it means, that the potential outcomes $Y_0$ and $Y_1$ are conditionally independent of the treatment T, conditioned on covariates X: $(Y_0, Y_1) \perp \!\!\! \perp \ T \: | \; X$. Ignorability can not be tested based on the observed data.
+1. *Ignorability*: There are no unobserved confounding factors. Mathematically it means, that the potential outcomes $Y_0$ and $Y_1$ are conditionally independent of the treatment T, conditioned on covariates X:
+
+$$(Y_0, Y_1) \perp \!\!\! \perp \ T \: | \; X$$
+
+Ignorability can not be tested, based on the observed data.
 
 2. *Overlap (common support)*: There always must be some stochasticity in the treatment decisions. Thus, we assume that the propensity score is always bounded between 0 and 1:
 
