@@ -176,9 +176,11 @@ $$
 p(X|t=0) \cdot w_0(X) \approx p(X|t=1) \cdot w_1(X)
 $$
 
-The *propensity score* for a binary treatment is $p(T=1|x)$ which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
-
-The *propensity score* for a binary treatment is $p(T=1|x)$ which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
+The *propensity score* for a binary treatment
+is $p(T=1|x)$ which is independent of the
+outcome $Y$. In the binary treatment regime
+for example, the propensity score could be
+computed with logistic regression.
 
 **Propensity Score Computation/Algorithm**:
 
@@ -240,7 +242,8 @@ where
 
 * $n_1/n$ is the proportion of individuals that received treatment 1
 
-* $\hat{p}(t_i=1|x_i)$ is the propensity score of individual $i$ for treatment 1.
+* $\hat{p}(t_i=1|x_i)$ is the propensity score
+of individual $i$ for treatment 1.
 
 Note:
 The second term for treatment 0 can be derived analogously.
