@@ -168,13 +168,17 @@ $$
 
 which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
 
+which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
+
 The goal of propensity score methods is to weight the conditional distributions such that the differences between treatments disappear. This presents us with the challenge of finding the weights $w_{T}(x)$ for each treatment $T$ to achieve the property
 
 $$
 p(X|t=0) \cdot w_0(X) \approx p(X|t=1) \cdot w_1(X)
 $$
 
-The *propensity score* for a binary treatment is $p(T=1|x)$, which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
+The *propensity score* for a binary treatment is $p(T=1|x)$ which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
+
+The *propensity score* for a binary treatment is $p(T=1|x)$ which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
 
 **Propensity Score Computation/Algorithm**:
 
