@@ -170,8 +170,6 @@ which means that the conditional distribution
 of $X$ given treatment $T=t$, denoted as
 $p(X|T=t)$, varies for different treatments $T$.
 
-which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
-
 The goal of propensity score methods is to weight the conditional distributions such that the differences between treatments disappear. This presents us with the challenge of finding the weights $w_{T}(x)$ for each treatment $T$ to achieve the property
 
 $$
