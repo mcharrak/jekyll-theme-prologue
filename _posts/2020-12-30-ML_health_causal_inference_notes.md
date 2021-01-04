@@ -98,6 +98,7 @@ p(T = t, X = x) > 0 \; \forall t,x
 $$
 
 Note:
+
 Overlap can be empirically assessed from the observed data.
 
 
@@ -113,19 +114,15 @@ There are 2 common approaches for counterfactual inference:
 2. Propensity scores.
 
 **Reminder**:
-
 Ignorability is the assumption of no hidden confounding factors.
 
 **Matching**:
-
 The key idea of matching is to use each individual's *"twin"*, to get some intuition about what their counterfactual outcomes might have been. This method works well in a large-sample-setting where we are more likely to observe a counterfactual for every unit/individual in the data.
 
 Visual example/description:
-
 In a 2D-plane with two groups of colored points, say red and blue points, we match each point with it's nearest neighbour from the opposite color. For a blue point for example, we match it with the nearest red point based on some pre-defined measure of distance $d$. Then we can compare the outcomes of the matched pair to get an intuition about the counterfactual outcome.
 
 **Mathematical example - 1-NN (nearest neighbour) matching**:
-
 Let $d(\cdot,\cdot)$ be a metric between the covariate $X$ of two units/individuals. For each individual $i$, we define
 
 $$j(i) = \underset{j \; s.t. \; t_j \neq t_i}{argmin} \; d(X_j,X_i)
@@ -169,6 +166,7 @@ $$
 p(X|t=0) \neq p(X|t=1)
 $$
 
+
 which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
 
 The goal of propensity score methods is to weight the conditional distributions such that the differences between treatments disappear. This presents us with the challenge of finding the weights $w_{T}(x)$ for each treatment $T$ to achieve the property
@@ -193,7 +191,6 @@ where the inverse of the propensity score is the *weighting* that we referred to
 Now we provide the derivation of this ATE estimator.
 
 Hint:
-
 Under the assumption that the potential outcomes, $Y_1(x),Y_0(x)$, are deterministic, they no longer are random variables.
 
 First, we can define the ATE as
@@ -242,7 +239,6 @@ where
 * $\hat{p}(t_i=1|x_i)$ is the propensity score of individual $i$ for treatment 1.
 
 Note:
-
 The second term for treatment 0 can be derived analogously.
 
 The disadvantage of inverse propensity weighting (IPW) happens when the data lacks overlap - meaning that some treatments are very unlikely for a data point. As a consequence, these samples/data points will have propensity scores close to 0, which causes large variances (due to the inverse weighting of the propensity scores) and errors in the estimation of the ATE. Moreover, with reduced overlap, the propensity scores become less informative.
@@ -252,11 +248,9 @@ The disadvantage of inverse propensity weighting (IPW) happens when the data lac
 There are 2 methods to employ ML for causal inference
 
 1. **Covariate Adjustment Method**:
-
 Learn a model $f(X,T)$ that predicts the outcome $Y$ given covariate $X$ and treatment $T$. Then use $f(X,T)$ to impute counterfactuals.
 
 2. **Propensity Score Method**:
-
 Learn the propensity scores (i.e., predict the probability of a treatment $T$ given covariate $X$). For example, for binary treatment we can use logistic regression to get the predictions. Then use scores to re-weight each outcome.
 
 Both methods give consistent estimates only if
