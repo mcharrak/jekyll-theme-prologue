@@ -166,7 +166,6 @@ $$
 p(X|t=0) \neq p(X|t=1)
 $$
 
-
 which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
 
 The goal of propensity score methods is to weight the conditional distributions such that the differences between treatments disappear. This presents us with the challenge of finding the weights $w_{T}(x)$ for each treatment $T$ to achieve the property
@@ -236,6 +235,7 @@ $$
 where
 
 * $n_1/n$ is the proportion of individuals that received treatment 1
+
 * $\hat{p}(t_i=1|x_i)$ is the propensity score of individual $i$ for treatment 1.
 
 Note:
