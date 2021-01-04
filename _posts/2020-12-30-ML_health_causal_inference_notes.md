@@ -9,20 +9,24 @@ date: 2020-12-30 4:00:00
 
 ---
 
+
 *"Correlation does not imply causation."*
 
 ---
 
-##### PART 1
+##### PART 1:
 
 #### Motivation
 
 The health system does not want to know how to **predict** diabetes - it wants to know how to **PREVENT** it.
 Also, people respond differently to the same treatment - which is called **treatment response heterogeneity**.
 
-* Example question: *"Does smoking cause lung cancer?"*
-* Problem: A randomized control trial (RCT) is unethical.
-* Idea: Using observational data to answer this question. Answering such questions from observational data is challenging because of confounding factors, that do both, cause people to be smokers but also cause them to receive lung cancer.
+* Example question:
+*"Does smoking cause lung cancer?"*
+* Problem:
+A randomized control trial (RCT) is unethical.
+* Idea:
+Using observational data to answer this question. Answering such questions from observational data is challenging because of confounding factors, that do both, cause people to be smokers but also cause them to receive lung cancer.
 
 ---
 
@@ -50,7 +54,7 @@ Let us assume that there are 2 outcomes for each individual/unit $i$:
 1. the "control outcome" $Y_0(x_i)$, had the unit not been treated
 2. the "treated outcome" $Y_1(x_i)$, had the unit been treated.
 
-The Conditional Average Treatment Effect (CATE) for unit $i$ given covariate $x_i$ is defined as:
+The Conditional Average Treatment Effect (CATE) for unit $i$ given covariate $x_i$ is defined as
 
 $$
 CATE(x_i) =
@@ -73,18 +77,21 @@ A hidden variable $h$ (i.e., confounder), is a variable which is not observed an
 A confounding factor is a variable that
 
 * is unobserved in the observational dataset
-* is affecting both, the treatment $T$ and the potential outcomes $Y_i(x)$ (i.e., assuming the classical potential-outcomes-graph with 1 node each for treatment, potential outcome, and covariate; there would be an edge from $h$ to $T$ and an edge from $h$ to each potential outcome $Y_i(x)$0.
+* is affecting both, the treatment $T$ and the potential outcomes $Y_i(x)$ (i.e., assuming the classical potential-outcomes-graph with 1 node each for treatment, potential outcome, and covariate; there would be an edge from $h$ to $T$ and an edge from $h$ to each potential outcome $Y_i(x)$).
 
 Typical assumptions:
 
-1. *Ignorability*: There are no unobserved confounding factors. Mathematically it means, that the potential outcomes $Y_0$ and $Y_1$ are conditionally independent of the treatment T, conditioned on covariates X:
+1. *Ignorability*:
+There are no unobserved confounding factors. Mathematically it means, that the potential outcomes $Y_0$ and $Y_1$ are conditionally independent of the treatment T, conditioned on covariates $X$
 
 $$(Y_0, Y_1) \perp \!\!\! \perp \ T \: | \; X$$
 
 Note:
+
 Ignorability can not be tested, based on the observed data.
 
-2. *Overlap (common support)*: There always must be some stochasticity in the treatment decisions. Thus, we assume that the propensity score is always bounded between 0 and 1:
+2. *Overlap (common support)*:
+There always must be some stochasticity in the treatment decisions. Thus, we assume that the propensity score is always bounded between 0 and 1 such that
 
 $$
 p(T = t, X = x) > 0 \; \forall t,x
@@ -98,19 +105,23 @@ The *propensity score* is the probability of receiving some treatment (for each 
 
 ---
 
-##### PART 2
+##### PART 2:
 
 There are 2 common approaches for counterfactual inference:
 
 1. Covariate adjustment, where we explicitly model the relationship between treatment $T$, confounder $X$, and outcome $Y$ as a function $f(X,T) \approx Y$.
 2. Propensity scores.
 
-**Reminder**: Ignorability is the assumption of no hidden confounding factors.
+**Reminder**:
+
+Ignorability is the assumption of no hidden confounding factors.
 
 **Matching**:
+
 The key idea of matching is to use each individual's *"twin"*, to get some intuition about what their counterfactual outcomes might have been. This method works well in a large-sample-setting where we are more likely to observe a counterfactual for every unit/individual in the data.
 
 Visual example/description:
+
 In a 2D-plane with two groups of colored points, say red and blue points, we match each point with it's nearest neighbour from the opposite color. For a blue point for example, we match it with the nearest red point based on some pre-defined measure of distance $d$. Then we can compare the outcomes of the matched pair to get an intuition about the counterfactual outcome.
 
 **Mathematical example - 1-NN (nearest neighbour) matching**:
@@ -158,7 +169,7 @@ $$
 p(X|t=0) \neq p(X|t=1)
 $$
 
-which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$, varies with $T$.
+which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
 
 The goal of propensity score methods is to weight the conditional distributions such that the differences between treatments disappear. This presents us with the challenge of finding the weights $w_{T}(x)$ for each treatment $T$ to achieve the property
 
@@ -166,8 +177,7 @@ $$
 p(X|t=0) \cdot w_0(X) \approx p(X|t=1) \cdot w_1(X)
 $$
 
-The *propensity score* for a binary treatment is
-$p(T=1|x)$, which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
+The *propensity score* for a binary treatment is $p(T=1|x)$, which is independent of the outcome $Y$. In the binary treatment regime for example, the propensity score could be computed with logistic regression.
 
 **Propensity Score Computation/Algorithm**:
 
@@ -175,12 +185,15 @@ Using propensity scores, one can compute the ATE from the dataset samples, $(x_1
 
 1. Use any ML method to estimate the probability of a treatment $T=t$ given $x$:
 $\hat{p}(T=t|x)$ for every data point $x$
-2. Then, $$\hat{ATE} = \frac{1}{n} \sum_{i \: s.t. \: t_i = 1} \frac{y_i}{\hat{p}(t_i = 1|x_i)} - \frac{1}{n} \sum_{i \: s.t. \: t_i = 0} \frac{y_i}{\hat{p}(t_i = 0|x_i)}$$
-The inverse of the propensity score is the *weighting* that we referred to earlier as $w_T(x_i)$. This method is called **Inverse Propensity Weighting IPW)**.
+
+2. Then
+$$\hat{ATE} = \frac{1}{n} \sum_{i \: s.t. \: t_i = 1} \frac{y_i}{\hat{p}(t_i = 1|x_i)} - \frac{1}{n} \sum_{i \: s.t. \: t_i = 0} \frac{y_i}{\hat{p}(t_i = 0|x_i)}$$
+where the inverse of the propensity score is the *weighting* that we referred to earlier as $w_T(x_i)$. This method is called **Inverse Propensity Weighting (IPW)**.
 
 Now we provide the derivation of this ATE estimator.
 
 Hint:
+
 Under the assumption that the potential outcomes, $Y_1(x),Y_0(x)$, are deterministic, they no longer are random variables.
 
 First, we can define the ATE as
@@ -191,7 +204,7 @@ $$
 
 where the expectation is over **all** individuals $i$ and not only the individuals that received the specific treatment. For the expectation we sample from $p(x)$.
 
-We need to show, that the first term in the $\hat{ATE}$ is an estimator of the first term in the $ATE$ (and analogously for the second term).
+Second, we need to show that the first term in the $\hat{ATE}$ is an estimator of the first term in the $ATE$ (and analogously for the second term).
 
 From Bayes' rule we know
 
@@ -205,7 +218,7 @@ $$
 p(x) = p(x|T=1) \cdot  \frac{p(T=1)}{p(T=1|x)}
 $$
 
-Therefore, we can re-write the first term of $ATE$ as follows
+Finally, we can re-write the first term of $ATE$ as follows
 
 $$
 \mathbb{E}_{x \sim p(x)} [Y_1(x)] = \mathbb{E}_{x \sim p(x|T=1)} \left[Y_1(x) \frac{p(T=1)}{p(T=1|x)} \right]
@@ -223,7 +236,12 @@ $$
 \mathbb{E}_{x \sim p(x|T=1)} \left[ \frac{p(T=1)}{p(T=1|x)} \cdot Y_1(x) \right] \approx \frac{1}{n_1} \sum_{i \; s.t. \; t_i = 1} \left[ \frac{n_1/n}{\hat{p}(t_i=1|x_i)} \cdot y_i \right]
 $$
 
-where $n_1/n$ is the proportion of individuals that received treatment 1 and where $\hat{p}(t_i=1|x_i)$ is the propensity score of individual i for treatment 1.
+where
+
+* $n_1/n$ is the proportion of individuals that received treatment 1
+* $\hat{p}(t_i=1|x_i)$ is the propensity score of individual $i$ for treatment 1.
+
+Note:
 
 The second term for treatment 0 can be derived analogously.
 
@@ -233,9 +251,12 @@ The disadvantage of inverse propensity weighting (IPW) happens when the data lac
 
 There are 2 methods to employ ML for causal inference
 
-1. **Covariate Adjustment Method**: Learn a model $f(X,T)$ that predicts the outcome $Y$ given covariate $X$ and treatment $T$. Then use $f(X,T)$ to impute counterfactuals.
+1. **Covariate Adjustment Method**:
+
+Learn a model $f(X,T)$ that predicts the outcome $Y$ given covariate $X$ and treatment $T$. Then use $f(X,T)$ to impute counterfactuals.
 
 2. **Propensity Score Method**:
+
 Learn the propensity scores (i.e., predict the probability of a treatment $T$ given covariate $X$). For example, for binary treatment we can use logistic regression to get the predictions. Then use scores to re-weight each outcome.
 
 Both methods give consistent estimates only if
