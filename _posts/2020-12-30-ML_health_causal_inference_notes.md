@@ -9,13 +9,11 @@ date: 2020-12-30 4:00:00
 
 ---
 
-<div align = "center">
 *"Correlation does not imply causation."*
-</div>
 
 ---
 
-##### <div align = "center">PART 1</div>
+##### PART 1
 
 #### Motivation
 
@@ -100,7 +98,7 @@ The *propensity score* is the probability of receiving some treatment (for each 
 
 ---
 
-##### <div align = "center">PART 2</div>
+##### PART 2
 
 There are 2 common approaches for counterfactual inference:
 
