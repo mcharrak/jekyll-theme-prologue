@@ -17,7 +17,8 @@ date: 2020-12-30 4:00:00
 
 ##### <div align = "center">PART 1</div>
 
-#### Motivation:
+#### Motivation
+
 The health system does not want to know how to **predict** diabetes - it wants to know how to **PREVENT** it.
 Also, people respond differently to the same treatment - which is called **treatment response heterogeneity**.
 
@@ -69,7 +70,8 @@ The fundamental problem of causal inference is that we only ever observe one of 
 
 A hidden variable $h$ (i.e., confounder), is a variable which is not observed and which affects both, the treatment $T$ (that the individual receives) and the potential outcomes $Y_i(x)$.
 
-##### Confounding factor $h$:
+##### Confounding factor $h$
+
 A confounding factor is a variable that
 
 * is unobserved in the observational dataset
@@ -229,7 +231,7 @@ The second term for treatment 0 can be derived analogously.
 
 The disadvantage of inverse propensity weighting (IPW) happens when the data lacks overlap - meaning that some treatments are very unlikely for a data point. As a consequence, these samples/data points will have propensity scores close to 0, which causes large variances (due to the inverse weighting of the propensity scores) and errors in the estimation of the ATE. Moreover, with reduced overlap, the propensity scores become less informative.
 
-#### Conclusion:
+#### Conclusion
 
 There are 2 methods to employ ML for causal inference
 
