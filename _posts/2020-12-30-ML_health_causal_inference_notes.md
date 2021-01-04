@@ -166,7 +166,7 @@ $$
 p(X|t=0) \neq p(X|t=1)
 $$
 
-which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
+which means that the conditional distribution of $X$ given treatment $T=t$, denoted as $p(X|T=t)$, varies for different treatments $T$.
 
 which means that the conditional distribution of $X$ given treatment $T=t$, $p(X|T=t)$ varies for different treatments $T$.
 
